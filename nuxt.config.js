@@ -1,10 +1,13 @@
+const PROJECT_NAME = 'simple-nuxt-study.ssg.js';
+const PRODUCTION_BASE_PATH = `/${PROJECT_NAME}/`;
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'simple-nuxt-study.ssg.js',
+    title: PROJECT_NAME,
     htmlAttrs: {
       lang: 'en',
     },
@@ -40,4 +43,14 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  generate: {
+    dir: "docs"
+  },
+
+  router: {
+    base: process.env.NODE_ENV === 'production'
+      ? PRODUCTION_BASE_PATH
+      : '/'
+  },
 }
