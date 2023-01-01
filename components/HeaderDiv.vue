@@ -25,15 +25,16 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #Links {
-  margin-top: 3rem;
   display: flex;
-  a {
+  list-style: none;
+  li {
     margin-right: 0.5rem;
     margin-bottom: 1rem;
     padding-right: 0.5rem;
     border-right: 1px lightgray solid;
+    a {
     color: #0E6DFE;
     text-decoration: none;
     &:last-child {
@@ -43,6 +44,33 @@ export default {
     }
     &:hover {
       text-decoration: underline;
+    }
+  }
+  }
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: rgba(white, 0.99);
+  z-index: 100;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 1500px;
+  margin: 0 auto;
+  nav {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    #Links {
+      margin: 0;
+      padding: 1rem;
+      position: absolute;
+      inset: 0;
     }
   }
 }
