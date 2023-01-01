@@ -9,7 +9,7 @@ export default {
   head: {
     title: PROJECT_NAME,
     htmlAttrs: {
-      lang: 'en',
+      lang: 'ja',
     },
     meta: [
       { charset: 'utf-8' },
@@ -45,7 +45,7 @@ export default {
   build: {},
 
   generate: {
-    dir: "docs"
+    dir: "dist"
   },
 
   router: {
