@@ -9,7 +9,7 @@ export default {
   head: {
     title: PROJECT_NAME,
     htmlAttrs: {
-      lang: 'en',
+      lang: 'ja',
     },
     meta: [
       { charset: 'utf-8' },
@@ -17,11 +17,14 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: `${PRODUCTION_BASE_PATH}favicon.ico` }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: [
+    'bootstrap/dist/css/bootstrap.min.css',
+    '@/assets/css/style.scss',
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -45,7 +48,7 @@ export default {
   build: {},
 
   generate: {
-    dir: "docs"
+    dir: "dist"
   },
 
   router: {
