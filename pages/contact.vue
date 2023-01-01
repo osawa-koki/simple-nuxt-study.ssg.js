@@ -22,13 +22,15 @@ import pages from '~/pages';
 
 const MailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
 const emojis = ['🥺', '👼', '😭', '😇', '😢', '😇', '😭', '👼', '🥺'];
+const GetEmoji = () => emojis[Math.floor(Math.random() * emojis.length)];
+let interval;
 
 export default {
   name: 'IndexPage',
   data() {
     return {
       pages,
-      emoji: emojis[Math.floor(Math.random() * emojis.length)],
+      emoji: GetEmoji(),
       click_count: 0,
       click_me_icon: '🥺',
       mail: 'osawa-koki@example.com',
@@ -40,9 +42,14 @@ export default {
     }
   },
   mounted() {
-    setInterval(() => {
-      this.emoji = emojis[Math.floor(Math.random() * emojis.length)];
+    interval = setInterval(() => {
+      // eslint-disable-next-line no-console
+      console.log(GetEmoji());
+      this.emoji = GetEmoji();
     }, 1000);
+  },
+  beforeDestroy() {
+    clearInterval(interval);
   },
   methods: {
     clickMe() {
