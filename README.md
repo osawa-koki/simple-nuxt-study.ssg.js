@@ -1,6 +1,7 @@
 # simple-nuxt-study.ssg.js
 
 Nuxt.jsの学習用プロジェクト。  
+JavaScriptを使用。  
 
 ## 実行方法
 
