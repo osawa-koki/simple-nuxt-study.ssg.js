@@ -2,7 +2,7 @@
   <div>
     <HeaderDiv />
     <main>
-      <h2>Let's Nuxt 👍</h2>
+      <h2>Dummy Contact Form 👍</h2>
       <div class="alert alert-info" role="alert">You clicked {{ click_count }} times.</div>
       <button type="button" class="btn btn-primary" @click="clickMe">Click me {{ emoji }}</button>
       <hr />
