@@ -12,7 +12,7 @@ yarn
 yarn dev
 
 # ビルド
-yarn build
+yarn generate
 ```
 
 ## 補足
